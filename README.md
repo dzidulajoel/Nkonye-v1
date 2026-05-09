@@ -1,4 +1,127 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Nkonye-v1 -- Plateforme digitale des prénoms africains
+
+## 1. Résumé / Description du projet
+
+Nkonye est une application mobile et web dédiée à la valorisation, la
+conservation et la diffusion des prénoms africains.
+Elle permet aux utilisateurs de découvrir des prénoms issus de
+différentes cultures africaines, d'en comprendre la signification et
+l'origine, et de les partager à travers une expérience interactive et
+moderne.
+
+## 2. Problématique (problèmes identifiés)
+
+- Manque de centralisation des prénoms africains
+- Perte progressive de certaines identités culturelles et
+    linguistiques
+- Difficulté d'accès à des informations fiables
+- Faible valorisation numérique des cultures africaines
+- Absence de plateforme interactive dédiée
+
+## 3. Objectifs du projet
+
+- Centraliser une base de données riche
+- Faciliter la recherche et la compréhension
+- Promouvoir la culture africaine
+- Offrir une expérience interactive
+- Encourager le partage culturel
+
+## 4. Utilité et impact du projet
+
+- Aider au choix de prénoms significatifs
+- Renforcer l'identité culturelle
+- Créer une communauté
+- Moderniser la transmission culturelle
+- Valoriser la diversité africaine
+
+## 5. Public cible
+
+- Jeunes parents
+- Diaspora africaine
+- Passionnés de culture
+- Étudiants et chercheurs
+- Utilisateurs sociaux
+
+## 6. Fonctionnalités clés (MVP)
+
+- Recherche de prénoms
+- Fiches détaillées
+- Générateur aléatoire
+- Système de favoris
+- Authentification
+- Partage simple
+- Galerie utilisateur
+
+## 7. Fonctionnalités avancées
+
+- Génération d'images via IA
+- Mini réseau social
+- Profils utilisateurs enrichis
+- Contenus culturels enrichis
+- Recommandations intelligentes
+
+## 8. Parcours utilisateur
+
+1. Inscription / connexion
+2. Accueil et suggestions
+3. Recherche ou exploration
+4. Consultation d'un prénom
+5. Favori ou partage
+6. Interaction sociale
+7. Profil utilisateur
+
+## 9. Technologies envisagées
+
+- Frontend + Backend : Next.js (App Router)
+- PWA : Service Worker + Manifest
+- API : Routes API Next.js (/app/api)
+- BDD : PostgreSQL + Prisma
+- Auth : NextAuth ou JWT
+
+
+# Nkonye v1 : Backend
+
+Backend API construit avec  Next.js, MongoDB et JWT authentication.
+
+## Features
+
+- Utilisateur signup
+- Utilisateur login
+- Password hashing with bcrypt
+- MongoDB Atlas connection
+
+## Tech Stack
+
+#### backend 
+- Next.js
+- TypeScript
+- MongoDB
+- Mongoose
+- bcryptjs
+
+
+## Installation
+
+```bash
+npm install
+```
+
+## lancer le projet :
+
+```bash
+npm run dev
+```
+
+
+## routes de l'api
+ #### Authentification : 
+- login : /api/login
+- signup : /api/signup
+
+
+
+
+
 
 ## Getting Started
 
@@ -14,23 +137,4 @@ pnpm dev
 bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
