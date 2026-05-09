@@ -1,7 +1,6 @@
 import connectDB from "@/libs/db";
 import User from '@/libs/models/utilisateurs';
-import { NextRequest, NextResponse } from "next/server"
-import mongoose from "mongoose";
+import {  NextResponse } from "next/server"
 
 // GET /api/users → liste utilisateurs (admin)
 export const GET = async () => {
