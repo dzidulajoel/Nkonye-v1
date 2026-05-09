@@ -1,7 +1,6 @@
 import mongoose from "mongoose";
 const userSchema = new mongoose.Schema(
         {
-                // 👤 identité utilisateur
                 nom: {
                         type: String,
                         required: true,
@@ -12,7 +11,6 @@ const userSchema = new mongoose.Schema(
                         required: true,
                         trim: true,
                 },
-                // 📧 email principal (login + communication)
                 email: {
                         type: String,
                         unique: true,
@@ -22,7 +20,6 @@ const userSchema = new mongoose.Schema(
                         trim: true,
                         match: [/^\S+@\S+\.\S+$/, "Email invalide"],
                 },
-                // 🔐 mot de passe (uniquement si login local)
                 password: {
                         type: String,
                         length: 8,
@@ -31,14 +28,11 @@ const userSchema = new mongoose.Schema(
                         },
                         default: null,
                 },
-                // 📱 infos optionnelles utilisateur
                 phone: { type: String, default: null },
                 country: { type: String, default: null },
                 dateOfBirth: { type: Date, default: null },
                 avatar: { type: String, default: null },
-                // 🔑 type d'authentification
                 provider: { type: String, enum: ["local", "google", "facebook"], default: "local",},
-                // 🆔 id du provider (google/facebook)
                 providerId: { type: String, default: null },
                 isVerified: {
                         type: Boolean,
@@ -59,10 +53,6 @@ const userSchema = new mongoose.Schema(
                 timestamps: true, // createdAt + updatedAt
         }
 );
-
-
-
-// 📇 Index composé pour recherches provider
 userSchema.index({ provider: 1, providerId: 1 });
 
 export default mongoose.models.User || mongoose.model("User", userSchema);
