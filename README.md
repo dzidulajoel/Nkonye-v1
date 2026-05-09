@@ -114,17 +114,54 @@ npm run dev
 
 
 ## routes de l'api
+
  #### Authentification : 
-- login : /api/login
-- signup : /api/signup
+POST /api/auth/register → inscription utilisateur
+POST /api/auth/login → connexion
+POST /api/auth/logout → déconnexion
+GET /api/auth/me → utilisateur connecté
+POST /api/auth/refresh → refresh token (JWT)
 
 
+#### UTILISATEURS
+GET /api/users → liste utilisateurs (admin)
+GET /api/users/:id → profil utilisateur
+PATCH /api/users/:id → mise à jour profil
+DELETE /api/users/:id → suppression compte
 
 
+#### PRÉNOMS (CŒUR DU PROJET)
+GET /api/prenoms → liste des prénoms (filtres: pays, sexe, origine)
+GET /api/prenoms/:id → détail prénom
+POST /api/prenoms → ajouter prénom (admin/contributeur)
+PATCH /api/prenoms/:id → modifier prénom
+DELETE /api/prenoms/:id → supprimer prénom
+
+
+#### FAVORIS
+GET /api/favorites → favoris utilisateur
+POST /api/favorites/:prenomId → ajouter aux favoris
+DELETE /api/favorites/:prenomId → retirer des favoris
+
+
+#### COMMENTAIRES
+GET /api/comments/prenom/:prenomId → commentaires d’un prénom
+POST /api/comments → ajouter commentaire
+PATCH /api/comments/:id → modifier commentaire
+DELETE /api/comments/:id → supprimer commentaire
+
+
+#### LIKE / INTERACTIONS
+POST /api/likes/prenom/:prenomId → liker prénom
+DELETE /api/likes/prenom/:prenomId → retirer like
+
+
+#### RECHERCHE & DÉCOUVERTE
+GET /api/search?q= → recherche globale
+GET /api/discover → suggestions prénoms (random + tendances)
 
 
 ## Getting Started
-
 First, run the development server:
 
 ```bash
